@@ -1,6 +1,6 @@
 # Forms and Reactive Forms
 
-A smaller app to deal with forms and reactive forms in Angular. This code is part of [The Modern Angular Bootcamp [2020]](https://www.udemy.com/course/the-modern-angular-bootcamp/) course available on [Udemy](https://www.udemy.com/course/the-modern-angular-bootcamp/)
+A smaller app to deal with reactive and template forms in Angular. This code is part of [The Modern Angular Bootcamp [2020]](https://www.udemy.com/course/the-modern-angular-bootcamp/) course available on [Udemy](https://www.udemy.com/course/the-modern-angular-bootcamp/)
 
 Made with &hearts; by Ivan Wilhelm.
 
