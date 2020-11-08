@@ -1,16 +1,29 @@
-<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
-  <app-input [control]="cardForm.get('name')" label="Name"></app-input>
-  <app-input [control]="cardForm.get('cardNumber')" label="Number"></app-input>
-  <div class="columns">
-    <div class="column">
-      <app-input [control]="cardForm.get('expiration')" label="Expiration"></app-input>
-    </div>
-    <div class="column">
-      <app-input [control]="cardForm.get('securityCode')" label="Security Code"></app-input>
-    </div>
+<div class="columns">
+  <div class="column">
+    <app-card
+      [name]="cardForm.get('name').value"
+      [cardNumber]="cardForm.get('cardNumber').value"
+      [expiration]="cardForm.get('expiration').value"
+    ></app-card>
   </div>
-  <div class="buttons">
-    <button [disabled]="cardForm.invalid" type="submit" class="button is-primary">Submit</button>
-    <button (click)="onResetClick()" type="button" class="button is-warning">Reset</button>
+  <div class="column">
+    <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+      <app-input [control]="cardForm.get('name')" label="Name"></app-input>
+      <app-input [control]="cardForm.get('cardNumber')" label="Number"></app-input>
+      <div class="columns">
+        <div class="column">
+          <app-input [control]="cardForm.get('expiration')" label="Expiration"></app-input>
+        </div>
+        <div class="column">
+          <app-input [control]="cardForm.get('securityCode')" label="Security Code"></app-input>
+        </div>
+      </div>
+      <div class="buttons">
+        <button [disabled]="cardForm.invalid" type="submit" class="button is-primary">
+          Submit
+        </button>
+        <button (click)="onResetClick()" type="button" class="button is-warning">Reset</button>
+      </div>
+    </form>
   </div>
-</form>
+</div>
